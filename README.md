@@ -26,6 +26,38 @@ cyChartCtx1.crudData({
   }
 })
 ```
+效果图:
+![折线图1](./docs/chart1.png)
+```
+const cyChartCtx2 = cyChart.init(document.getElementById('chartCvs2'))
+cyChartCtx2.setOptions({
+  type: 'brokenline-static',
+  coordinate: {
+    coordPlace: ['10%', '10%', '80%', '80%']
+  },
+  color: {
+    lineColor: ['blue', 'green', 'red']
+  }
+})
+cyChartCtx2.crudData({
+  type: 'xData',
+  data: ['one', 'two', 'three', 'four', 'five', 'six']
+}, {
+  type: 'yData',
+  target: 'data1',
+  data: [400, 700, 800, 1200, 1500, 1800]
+}, {
+  type: 'yData',
+  target: 'data2',
+  data: [300, 600, 750, 897, 1789, 400]
+}, {
+  type: 'yData',
+  target: 'data3',
+  data: [1345, 1456, 678, 890, 12, 234]
+})
+```
+效果图:
+![折线图1](./docs/chart2.png)
 ## 核心模块
 ### cy-chart.js(用来初始化实例对象)
 里面主要就是一个类, 用来创建实例对象
